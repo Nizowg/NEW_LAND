@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1b1b1b;
+    color: #ff7f27;
+    display: flex;
+    justify-content: flex-start; /* Изменено на flex-start */
+    align-items: flex-start;     /* Изменено на flex-start */
+    min-height: 100vh;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    max-width: 800px; /* Ограничение ширины контейнера */
+    margin: 20px auto;
+    text-align: left; /* Выравнивание текста по левому краю */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+h1, h2, h3 {
+    color: #ff7f27;
+}
+
+p, li, a {
+    color: white;
+}
+
+.vibrate {
+    display: inline-block;
+    animation: vibrate 0.3s infinite alternate;
+    color: #fff600;
+}
+
+@keyframes vibrate {
+    from { transform: translateX(0); }
+    to { transform: translateX(2px); }
+}
+
+ol {
+    text-align: left;
+    padding-left: 1.5em;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.shimmer {
+    font-size: 2em;
+    font-weight: bold;
+    background: linear-gradient(270deg, #ff8c00, #ff0000, #fbff00);
+    background-size: 600% 600%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: gradientAnimation 5s ease infinite;
+    text-align: center;
+    padding: 20px;
+    transition: opacity 1s ease;
+}
+
+.fade-out {
+    opacity: 0;
+}
